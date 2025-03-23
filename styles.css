@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-board {
+    text-align: center;
+}
+
+#county-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+    margin-bottom: 15px;
+}
+
+.correct-answer {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+}
+
+.guess-container {
+    margin: 20px 0;
+    position: relative; /* For positioning the dropdown */
+}
+
+#guess-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#submit-guess {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#dropdown-options {
+    position: absolute;
+    top: 100%; /* Place below the input */
+    left: 0;
+    width: 64%; /* Match input width plus padding */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.dropdown-option {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#attempts-left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#attempts-left, #attempts-left-4, #attempts-left-3, #attempts-left-2, #attempts-left-1, #attempts-left-0 {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+#reload-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#reload-button:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.modal-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modal-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        width: 90%;
+    }
+
+    #guess-input {
+        width: 70%;
+    }
+
+    #dropdown-options {
+        width: 74%; /* Match adjusted input width */
+    }
+}

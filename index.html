@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Right State!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Right State!</h1>
+    <div class="game-board">
+      <img id="county-image" src="/brazilian_states_svgs/Acre.svg" alt="State Image">
+      
+      <div class="correct-answer"></div>
+
+      <div class="guess-container">
+        <input type="text" id="guess-input" placeholder="Guess the State...">
+        <div id="dropdown-options" class="dropdown"></div>
+        <button id="submit-guess">Submit</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <div id="attempts-left-container">
+        <input type="text" id="attempts-left" value="Attempts left: 5" disabled>
+        <input type="text" id="attempts-left-4" value="" disabled>
+        <input type="text" id="attempts-left-3" value="" disabled>
+        <input type="text" id="attempts-left-2" value="" disabled>
+        <input type="text" id="attempts-left-1" value="" disabled>
+        <input type="text" id="attempts-left-0" value="" disabled>
+      </div>
+
+      <button id="reload-button">Reload Game</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
